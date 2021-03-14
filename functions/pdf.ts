@@ -20,7 +20,7 @@ const handler = async (event: any) => {
 
   const page = await browser.newPage();
 
-  await page.goto("https://www.google.com", {
+  await page.goto(event.queryStringParameters.url, {
     waitUntil: ["networkidle0", "load", "domcontentloaded"]
   });
 

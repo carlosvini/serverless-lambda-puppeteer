@@ -1,13 +1,15 @@
+org: carlosvini
+app: salvistas
 service: serverless-pdf-puppeteer
 frameworkVersion: "1.49.0"
 
 provider:
   name: aws
   versionFunctions: false
-  runtime: nodejs8.10
-  region: ap-southeast-2
+  runtime: nodejs10.x
+  region: us-east-1
   stage: dev
-  profile: hotpuma
+  profile: salvistas
 
   apiGateway:
     binaryMediaTypes:
@@ -15,7 +17,7 @@ provider:
 plugins:
   - serverless-webpack
   - serverless-offline
-  - serverless-domain-manager
+  # - serverless-domain-manager
 
 custom:
   webpack:
@@ -26,11 +28,11 @@ custom:
   serverless-offline:
     location: .webpack/service
 
-  customDomain:
-    domainName: labs.mianio.com
-    basePath: demo
-    stage: ${self:provider.stage}
-    createRoute53Record: true
+  # customDomain:
+  #   domainName: labs.mianio.com
+  #   basePath: demo
+  #   stage: ${self:provider.stage}
+  #   createRoute53Record: true
 
 functions:
   give-me-the-pdf:

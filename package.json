@@ -8,11 +8,11 @@
     "serverless": "sls offline start --port 3003 --stage dev --basePath / --prefix dev --location .webpack/service"
   },
   "dependencies": {
-    "chrome-aws-lambda": "^1.19.0",
+    "chrome-aws-lambda": "^2.0.0",
+    "iltorb": "^2.4.5",
     "middy": "^0.28.4",
-    "puppeteer-core": "1.19.0",
+    "puppeteer-core": "^2.1.0",
     "serverless": "1.49.0",
-    "serverless-domain-manager": "^3.2.6",
     "serverless-offline": "^6.0.0-alpha.0",
     "serverless-webpack": "^5.3.1",
     "typescript": "^3.5.3"

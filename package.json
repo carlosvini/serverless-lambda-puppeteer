@@ -12,7 +12,7 @@
     "iltorb": "^2.4.5",
     "middy": "^0.28.4",
     "puppeteer-core": "^2.1.0",
-    "serverless": "1.49.0",
+    "serverless": "^3.28.1",
     "serverless-offline": "^6.0.0-alpha.0",
     "serverless-webpack": "^5.3.1",
     "typescript": "^3.5.3"

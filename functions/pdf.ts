@@ -1,6 +1,7 @@
 import middy from "middy";
 import chromium from "chrome-aws-lambda";
 import puppeteer from "puppeteer-core";
+import url from 'url';
 import {
   cors,
   doNotWaitForEmptyEventLoop,
@@ -19,7 +20,10 @@ const handler = async (event: any) => {
   });
 
   const page = await browser.newPage();
-
+  const parsedUrl = url.parse(event.queryStringParameters.url);
+  if (!parsedUrl.hostname.match(/\.salvistas\.com\.br$/)) {
+    throw new Error("Invalid hostname: "+event.queryStringParameters.url);
+  }
   await page.goto(event.queryStringParameters.url, {
     waitUntil: ["networkidle0", "load", "domcontentloaded"]
   });

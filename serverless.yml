@@ -1,12 +1,12 @@
 org: carlosvini
 app: salvistas
 service: serverless-pdf-puppeteer
-frameworkVersion: "1.49.0"
+frameworkVersion: "3.28.1"
 
 provider:
   name: aws
   versionFunctions: false
-  runtime: nodejs10.x
+  runtime: nodejs14.x
   region: us-east-1
   stage: dev
   profile: salvistas

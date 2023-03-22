@@ -6,7 +6,7 @@ frameworkVersion: "3.28.1"
 provider:
   name: aws
   versionFunctions: false
-  runtime: nodejs18.x
+  runtime: nodejs14.x
   region: us-east-1
   stage: dev
   profile: salvistas
@@ -37,6 +37,8 @@ custom:
 functions:
   give-me-the-pdf:
     handler: functions/pdf.generate
+    layers:
+      - arn:aws:lambda:us-east-1:667032619881:layer:chrome_aws_lambda:1
     events:
       - http:
           path: puppeteer/pdf

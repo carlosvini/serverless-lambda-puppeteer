@@ -8,10 +8,10 @@
     "offline": "sls offline start --port 3003 --stage dev --prefix dev --location .webpack/service"
   },
   "dependencies": {
-    "chrome-aws-lambda": "^2.0.0",
+    "chrome-aws-lambda": "^10.1.0",
     "iltorb": "^2.4.5",
     "middy": "^0.36.0",
-    "puppeteer-core": "^2.1.0",
+    "puppeteer-core": "^10.1.0",
     "serverless": "^3.28.1",
     "serverless-offline": "^12.0.4",
     "serverless-webpack": "^5.11.0",
@@ -22,9 +22,9 @@
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-typescript": "^7.3.3",
-    "@types/puppeteer-core": "^1.9.0",
+    "@types/node": "^18.15.5",
     "babel-loader": "^8.0.6",
-    "puppeteer": "1.19.0",
+    "puppeteer": "^19.7.5",
     "webpack": "^4.39.1",
     "webpack-node-externals": "^1.7.2"
   }
